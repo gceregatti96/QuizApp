@@ -3,52 +3,51 @@
 <img src="https://login.salesforce.com/img/logo190.png" align="right" width="300">
 
 # Salesforce Quiz - LWC
-##### Este é um projeto Salesforce Lightning Web Component (LWC) que implementa um aplicativo de quiz simples. O objetivo final do aplicativo é permitir que os usuários respondam a perguntas de múltipla escolha e exibir seus resultados.
-## Funcionalidades
+##### This is a Salesforce Lightning Web Component (LWC) project that implements a simple quiz application. The ultimate goal of the application is to allow users to answer multiple-choice questions and display their results.
 
-### O aplicativo Quiz possui as seguintes funcionalidades:
+### Features
+The Quiz application has the following functionalities::
 
-- Exibição de uma lista de perguntas de múltipla escolha.
+- Display a list of multiple-choice questions.
 
-- Os usuários podem selecionar uma opção de resposta para cada pergunta.
+- Users can select an answer option for each question.
 
-- O botão "Submit" é desabilitado até que todas as perguntas sejam respondidas.
+- The "Submit" button is disabled until all questions are answered.
 
-- Quando o usuário clica em "Submit", o aplicativo verifica as respostas selecionadas e exibe o número total de respostas corretas.
+- When the user clicks "Submit," the application checks the selected answers and displays the total number of correct responses.
 
-- O resultado é exibido em um estilo dinâmico, com a cor do texto verde se todas as respostas estiverem corretas e vermelho se houver respostas incorretas.
+- The result is displayed in a dynamic style, with green text color if all answers are correct and red if there are incorrect answers.
 
-- Os usuários podem redefinir as respostas e começar o quiz novamente clicando no botão "Reset".
+- Users can reset the answers and start the quiz again by clicking the "Reset" button.
 
-- Componentes e Estrutura do Aplicativo
+## Components and Application Structure
+The application consists of a component called "QuizApp," which includes an HTML structure in the format of a Lightning card. Inside this card, there is a form that displays the questions and answer options.
 
-- O aplicativo consiste em um componente chamado "QuizApp" que inclui uma estrutura HTML no formato de um cartão Lightning. Dentro desse cartão, há um formulário que exibe as perguntas e opções de resposta.
+## Javascript <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/JavaScript.svg" width="17">
 
-## Javascript <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/59059d9d1a2c092696dc66e00931cc1181a4ce1f/icons/JavaScript.svg" width="17"> 
+### Properties:
+
+-- selected: An object that stores the answers selected by the user.
+
+-- correctAnswer: The number of correct answers.
+
+-- isSubmitted: An indicator of whether the quiz has been submitted.
+
+-- myQuestions: An array of objects representing the questions and answer options.
 
 
-###  Propriedades:
+### Methods:
 
+-- getAllNotSelected(): Returns a boolean value indicating whether all questions have been answered.
 
--- selected: Objeto que armazena as respostas selecionadas pelo usuário.
+-- getIsScore(): Returns a CSS class to style the result based on the number of correct answers.
 
--- correctAnswer: Número de respostas corretas.
+-- changeHandler(event): Event handler called when an answer option is selected.
 
--- isSubmitted: Indicador de se o quiz foi enviado.
+-- submitHandler(event): Event handler called when the form is submitted. It checks the selected answers and displays the result.
 
--- myQuestions: Array de objetos que representam as perguntas e opções de resposta.
+-- resetHandler(): Resets the quiz by clearing the selected answers and the result.
 
-### Métodos:
-
--- get allNotSelected(): Retorna um valor booleano indicando se todas as perguntas foram respondidas.
-
--- get isScore(): Retorna uma classe CSS para estilizar o resultado com base no número de respostas corretas.
-
--- changeHandler(event): Manipulador de eventos chamado quando uma opção de resposta é selecionada.
-
--- submitHandler(event): Manipulador de eventos chamado quando o formulário é enviado. Verifica as respostas selecionadas e exibe o resultado.
-
---resetHandler(): Reinicia o quiz, redefinindo as respostas selecionadas e o resultado.
 
 ## Contributing
  1. #### Fork it
