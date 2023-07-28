@@ -6,7 +6,7 @@
 ##### This is a Salesforce Lightning Web Component (LWC) project that implements a simple quiz application. The ultimate goal of the application is to allow users to answer multiple-choice questions and display their results.
 
 ### Features
-The Quiz application has the following functionalities::
+The Quiz application has the following functionalities:
 
 - Display a list of multiple-choice questions.
 
